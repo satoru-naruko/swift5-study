@@ -50,3 +50,10 @@ loop: while true {
 }
 
 print("while loop exit")
+
+conditionablelabel : if age == 21 {
+    if age % 3==0{
+        break conditionablelabel
+    }
+    print("conditionablelabel")
+}
