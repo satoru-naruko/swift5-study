@@ -57,3 +57,9 @@ conditionablelabel : if age == 21 {
     }
     print("conditionablelabel")
 }
+do {
+    // tはこのscodeの範囲内でのみ使用できる
+    let t = 39;
+    print(t);
+}
+
