@@ -57,9 +57,21 @@ conditionablelabel : if age == 21 {
     }
     print("conditionablelabel")
 }
-do {
-    // tはこのscodeの範囲内でのみ使用できる
+testlabel: do {
+    // tはこのscopeの範囲内でのみ使用できる
     let t = 39;
+    if t >= 39 {
+        break testlabel
+    }
     print(t);
 }
+
+var blood = "O型"
+search: for t in ["A型","B型","O型","AB型"] {
+    if blood == t {
+        print(t)
+        break search
+    }
+}
+
 
