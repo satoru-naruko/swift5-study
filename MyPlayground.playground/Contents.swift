@@ -74,4 +74,13 @@ search: for t in ["A型","B型","O型","AB型"] {
     }
 }
 
+func hogehoge (number :Int) {
+    
+    if number == 3 {
+        print("hogehogehoge");
+    }
+}
+
+hogehoge(number :5)
+hogehoge(number: 3)
 
