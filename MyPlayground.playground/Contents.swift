@@ -57,14 +57,21 @@ conditionablelabel : if age == 21 {
     }
     print("conditionablelabel")
 }
+testlabel: do {
+    // tはこのscopeの範囲内でのみ使用できる
+    let t = 39;
+    if t >= 39 {
+        break testlabel
+    }
+    print(t);
+}
 
-
-func hogehoge (number :Int) {
-    
-    if number == 3 {
-        print("hogehogehoge");
+var blood = "O型"
+search: for t in ["A型","B型","O型","AB型"] {
+    if blood == t {
+        print(t)
+        break search
     }
 }
 
-hogehoge(number :5)
-hogehoge(number: 3)
+
