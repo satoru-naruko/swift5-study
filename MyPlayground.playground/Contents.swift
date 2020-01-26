@@ -57,3 +57,14 @@ conditionablelabel : if age == 21 {
     }
     print("conditionablelabel")
 }
+
+
+func hogehoge (number :Int) {
+    
+    if number == 3 {
+        print("hogehogehoge");
+    }
+}
+
+hogehoge(number :5)
+hogehoge(number: 3)
