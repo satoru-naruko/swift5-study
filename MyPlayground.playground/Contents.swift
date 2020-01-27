@@ -106,7 +106,24 @@ mySwap(&x1, &x2)
 print(x1)
 print(x2)
 
+let defaultId: Int = 9
 
+func getSize( _ id:Int = defaultId) -> (Int){
+    var size = 10;
+    if id == defaultId {
+        size = 9
+    }
+    return size;
+}
 
+print(getSize(1))
+print(getSize()) //defaultサイズ
 
+// デフォルト引数は = xxxでも指定できる
+func setGray(level : Int=255, _ alpha : Float = 1.0){
+    print("Gray=\(level),Alpha=\(alpha)")
+}
+
+setGray(level:50)
+setGray(level:200, 30)
 
