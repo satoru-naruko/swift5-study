@@ -74,4 +74,56 @@ search: for t in ["A型","B型","O型","AB型"] {
     }
 }
 
+// 関数呼び出し時に number: xx が必要
+func hogehoge ( number: Int) {
+    
+    if number == 3 {
+        print("hogehogehoge");
+    }
+}
+
+// 関数呼び出し時に引数ラベルの省略を認める
+func hogehoge2 ( _ number: Int) {
+    
+    if number == 5 {
+        print("hogehogehoge2");
+    }
+}
+
+hogehoge2(5)
+hogehoge(number: 3)
+
+// 引数でinout を指定して　&をつけると関数内で値を変更できる
+func mySwap(_ a: inout Int, _ b: inout Int) {
+    let tmp = a; a = b; b = tmp;
+}
+
+var x1 = 100;
+var x2 = 200;
+
+mySwap(&x1, &x2)
+
+print(x1)
+print(x2)
+
+let defaultId: Int = 9
+
+func getSize( _ id:Int = defaultId) -> (Int){
+    var size = 10;
+    if id == defaultId {
+        size = 9
+    }
+    return size;
+}
+
+print(getSize(1))
+print(getSize()) //defaultサイズ
+
+// デフォルト引数は = xxxでも指定できる
+func setGray(level : Int=255, _ alpha : Float = 1.0){
+    print("Gray=\(level),Alpha=\(alpha)")
+}
+
+setGray(level:50)
+setGray(level:200, 30)
 
